@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1A1A1A;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+}
+
+.uploader {
+    border-radius: 24px;
+    width: 100%;
+    max-width: 570px;
+    border: 2px dashed #DCAC00;
+    background: rgba(#9C7A00, .08);
+    input {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 50px 0;
+        .title {
+            h1 {
+                color: #9C7A00;
+                font-weight: 500;
+                font-size: 28px;
+            }
+            p {
+                margin-top: 12px;
+                color: rgba(#FFFFFF, .3);
+                font-size: 17px;
+            }
+        }
+        .size-limit {
+            margin-top: 80px;
+            span {
+                color: rgba(#FFFFFF, .3);
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.files {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 570px;
+    .file {
+        width: 100%;
+        border-radius: 8px;
+        background: rgba(#fff, .10);
+        padding: 0 20px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        &.error {
+            background: rgba(#D0342C, .5);
+            .progress {
+                .bar {
+                    background: rgba(#D0342C, .5);
+                }
+            }
+        }
+        .progress {
+            height: 50px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border: solid;
+            z-index: -999;
+            border-radius: 8px;
+            .bar {
+                transition: .2s all ease;
+                border-radius: 8px;
+                height: 100%;
+                width: 0;
+                background: rgba(#DCAC00, .2);
+            }
+        }
+        &.completed {
+            > img {
+                display: block;
+            }
+        }
+        > img {
+            display: none;
+            width: 20px;
+        }
+        .details {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            .icon {
+                img {
+                    width: 30px;
+                }
+            }
+            .title {
+                margin-top: -2px;
+                span {
+                    color: #9C7A00;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

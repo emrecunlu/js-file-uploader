@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1A1A1A;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.uploader {
+  border-radius: 24px;
+  width: 100%;
+  max-width: 570px;
+  border: 2px dashed #DCAC00;
+  background: rgba(156, 122, 0, 0.08);
+}
+
+.uploader input {
+  display: none;
+}
+
+.uploader label {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.uploader label .title h1 {
+  color: #9C7A00;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.uploader label .title p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 17px;
+}
+
+.uploader label .size-limit {
+  margin-top: 80px;
+}
+
+.uploader label .size-limit span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 15px;
+}
+
+.files {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  max-width: 570px;
+}
+
+.files .file {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 20px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.files .file.error {
+  background: rgba(208, 52, 44, 0.5);
+}
+
+.files .file.error .progress .bar {
+  background: rgba(208, 52, 44, 0.5);
+}
+
+.files .file .progress {
+  height: 50px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border: solid;
+  z-index: -999;
+  border-radius: 8px;
+}
+
+.files .file .progress .bar {
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+  border-radius: 8px;
+  height: 100%;
+  width: 0;
+  background: rgba(220, 172, 0, 0.2);
+}
+
+.files .file.completed > img {
+  display: block;
+}
+
+.files .file > img {
+  display: none;
+  width: 20px;
+}
+
+.files .file .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.files .file .details .icon img {
+  width: 30px;
+}
+
+.files .file .details .title {
+  margin-top: -2px;
+}
+
+.files .file .details .title span {
+  color: #9C7A00;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */
